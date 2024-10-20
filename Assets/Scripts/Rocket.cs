@@ -26,11 +26,11 @@ public class Rocket : MonoBehaviour
         }
         if(Input.GetKey(KeyCode.A))
         {
-            print("Зажали А");
+            transform.Rotate(new Vector3(0,0,1));
         }
         else if(Input.GetKey(KeyCode.D))
         {
-            print("Зажали В");
+            transform.Rotate(new Vector3(0,0,-1));
         }
     }
 }
