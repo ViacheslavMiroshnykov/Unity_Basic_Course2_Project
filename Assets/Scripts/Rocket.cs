@@ -22,6 +22,23 @@ public class Rocket : MonoBehaviour
         Launch(); 
         Rotation();
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        switch(collision.gameObject.tag)
+        {
+            case "Friendly": 
+                print("OK");
+                break;
+            case "Battery":
+                print("WHAT");
+                break;
+            default:
+                print("RocketBOOM!");
+                break;
+        }
+    }
+
     void Launch()
     {
         if(Input.GetKey(KeyCode.Space))
@@ -32,7 +49,7 @@ public class Rocket : MonoBehaviour
                 audioSourse.Play();
             }
         }
-        else 
+        else if (audioSourse.isPlaying) 
         {
             audioSourse.Pause();
         }
