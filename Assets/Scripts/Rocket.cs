@@ -28,13 +28,13 @@ public class Rocket : MonoBehaviour
         switch(collision.gameObject.tag)
         {
             case "Friendly": 
-                print("OK");
+                print("Friendly");
                 break;
             case "Battery":
-                print("WHAT");
+                print("Battery");
                 break;
             default:
-                print("RocketBOOM!");
+                print("Rocket BOOM!");
                 break;
         }
     }
