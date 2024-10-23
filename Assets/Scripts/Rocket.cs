@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour
 {
@@ -9,34 +10,63 @@ public class Rocket : MonoBehaviour
     Rigidbody rigidBody;
     AudioSource audioSourse;
 
+    enum State {Playing,Dead,NextLevel};
+    State state = State.Playing;
+
     // Start is called before the first frame update
     void Start()
     {
+        state = State.Playing;
         rigidBody = GetComponent<Rigidbody>();
         audioSourse = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        if  (state == State.Playing)
+        {
         Launch(); 
         Rotation();
+        }
     }
 
     void OnCollisionEnter(Collision collision)
     {
+
+        if(state == State.Dead || state == State.NextLevel)
+        {
+            audioSourse.Stop();
+            return;
+        }
+
         switch(collision.gameObject.tag)
         {
             case "Friendly": 
                 print("Friendly");
                 break;
+            case "Finish":
+                state = State.NextLevel;
+                Invoke("LoadNextLevel",2f);
+                break;
             case "Battery":
                 print("Battery");
                 break;
             default:
-                print("Rocket BOOM!");
+                state = State.Dead;
+                Invoke("LoadFirstLevel",2f);
                 break;
         }
+    }
+
+    void LoadNextLevel() // Finish
+    {
+        SceneManager.LoadScene("Level 2");
+    }
+
+    void LoadFirstLevel() // Lose
+    {
+        SceneManager.LoadScene("Level 1");
     }
 
     void Launch()
@@ -54,6 +84,7 @@ public class Rocket : MonoBehaviour
             audioSourse.Pause();
         }
     }
+
     void Rotation()
     {
         float rotationSpeed = rotSpeed * Time.deltaTime;
