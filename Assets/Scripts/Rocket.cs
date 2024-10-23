@@ -7,6 +7,9 @@ public class Rocket : MonoBehaviour
 {
     [SerializeField]float rotSpeed = 100f;
     [SerializeField]float flySpeed = 100f;
+    [SerializeField] AudioClip flySounds;
+    [SerializeField] AudioClip boomSounds;
+    [SerializeField] AudioClip finishSounds;
     Rigidbody rigidBody;
     AudioSource audioSourse;
 
@@ -36,7 +39,6 @@ public class Rocket : MonoBehaviour
 
         if(state == State.Dead || state == State.NextLevel)
         {
-            audioSourse.Stop();
             return;
         }
 
@@ -47,6 +49,8 @@ public class Rocket : MonoBehaviour
                 break;
             case "Finish":
                 state = State.NextLevel;
+                audioSourse.Stop();
+                audioSourse.PlayOneShot(finishSounds);
                 Invoke("LoadNextLevel",2f);
                 break;
             case "Battery":
@@ -54,6 +58,8 @@ public class Rocket : MonoBehaviour
                 break;
             default:
                 state = State.Dead;
+                audioSourse.Stop();
+                audioSourse.PlayOneShot(boomSounds);
                 Invoke("LoadFirstLevel",2f);
                 break;
         }
@@ -76,7 +82,7 @@ public class Rocket : MonoBehaviour
             rigidBody.AddRelativeForce(Vector3.up*flySpeed*Time.deltaTime);
             if (audioSourse.isPlaying == false)
             {
-                audioSourse.Play();
+            audioSourse.PlayOneShot(flySounds);
             }
         }
         else if (audioSourse.isPlaying) 

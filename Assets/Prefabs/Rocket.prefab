@@ -471,7 +471,7 @@ Rigidbody:
   m_GameObject: {fileID: 5542616653725119934}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 1.3
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -502,7 +502,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotSpeed: 110
-  flySpeed: 1700
+  flySpeed: 1100
+  flySounds: {fileID: 8300000, guid: 3a4cb0256083f46899578e7ebc7dbbd2, type: 3}
+  boomSounds: {fileID: 8300000, guid: 6278e1ace181a492fba57cc6b945e54f, type: 3}
+  finishSounds: {fileID: 8300000, guid: e1aa13a83da004e8591261be679d5419, type: 3}
 --- !u!82 &3077256676517246495
 AudioSource:
   m_ObjectHideFlags: 0
@@ -513,7 +516,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b5264023cafad459aada7e45e84b6334, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
