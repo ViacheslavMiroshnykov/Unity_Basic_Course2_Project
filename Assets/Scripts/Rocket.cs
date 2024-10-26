@@ -10,6 +10,9 @@ public class Rocket : MonoBehaviour
     [SerializeField] AudioClip flySounds;
     [SerializeField] AudioClip boomSounds;
     [SerializeField] AudioClip finishSounds;
+    [SerializeField] ParticleSystem flyParticles;
+    [SerializeField] ParticleSystem boomParticles;
+    [SerializeField] ParticleSystem finishParticles;
     Rigidbody rigidBody;
     AudioSource audioSourse;
 
@@ -51,6 +54,7 @@ public class Rocket : MonoBehaviour
                 state = State.NextLevel;
                 audioSourse.Stop();
                 audioSourse.PlayOneShot(finishSounds);
+                finishParticles.Play();
                 Invoke("LoadNextLevel",2f);
                 break;
             case "Battery":
@@ -59,7 +63,9 @@ public class Rocket : MonoBehaviour
             default:
                 state = State.Dead;
                 audioSourse.Stop();
+                flyParticles.Stop();
                 audioSourse.PlayOneShot(boomSounds);
+                boomParticles.Play();
                 Invoke("LoadFirstLevel",2f);
                 break;
         }
@@ -83,13 +89,16 @@ public class Rocket : MonoBehaviour
             if (audioSourse.isPlaying == false)
             {
             audioSourse.PlayOneShot(flySounds);
+            flyParticles.Play();
             }
         }
-        else if (audioSourse.isPlaying) 
+        else 
         {
             audioSourse.Pause();
+            flyParticles.Stop();
         }
     }
+
 
     void Rotation()
     {
