@@ -51,26 +51,33 @@ public class Rocket : MonoBehaviour
                 print("Friendly");
                 break;
             case "Finish":
-                state = State.NextLevel;
-                audioSourse.Stop();
-                audioSourse.PlayOneShot(finishSounds);
-                finishParticles.Play();
-                Invoke("LoadNextLevel",2f);
+                Finish();
                 break;
             case "Battery":
                 print("Battery");
                 break;
             default:
-                state = State.Dead;
-                audioSourse.Stop();
-                flyParticles.Stop();
-                audioSourse.PlayOneShot(boomSounds);
-                boomParticles.Play();
-                Invoke("LoadFirstLevel",2f);
+                Lose();
                 break;
         }
     }
-
+    void Finish()
+    {
+        state = State.NextLevel;
+        audioSourse.Stop();
+        audioSourse.PlayOneShot(finishSounds);
+        finishParticles.Play();
+        Invoke("LoadNextLevel",2f);
+    }
+    void Lose()
+    {
+        state = State.Dead;
+        audioSourse.Stop();
+        flyParticles.Stop();
+        audioSourse.PlayOneShot(boomSounds, 0.3f);
+        boomParticles.Play();
+        Invoke("LoadFirstLevel",2f);
+    }
     void LoadNextLevel() // Finish
     {
         SceneManager.LoadScene("Level 2");
