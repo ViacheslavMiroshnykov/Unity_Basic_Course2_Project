@@ -74,7 +74,7 @@ public class Rocket : MonoBehaviour
         state = State.Dead;
         audioSourse.Stop();
         flyParticles.Stop();
-        audioSourse.PlayOneShot(boomSounds, 0.3f);
+        audioSourse.PlayOneShot(boomSounds, 0.2f);
         boomParticles.Play();
         Invoke("LoadFirstLevel",2f);
     }
