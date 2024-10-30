@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e4913ac50424b8888020a076c4fe73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 110
+  rotSpeed: 120
   flySpeed: 4200
   flySounds: {fileID: 8300000, guid: 3a4cb0256083f46899578e7ebc7dbbd2, type: 3}
   boomSounds: {fileID: 8300000, guid: f1ae47a7926574893a49396965e24dba, type: 3}
