@@ -40,7 +40,7 @@ public class Rocket : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
 
-        if(state == State.Dead || state == State.NextLevel)
+      if(state == State.Dead || state == State.NextLevel)
         {
             return;
         }

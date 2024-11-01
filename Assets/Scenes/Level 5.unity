@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: -45, y: 0, z: 0}
-  moveSpeed: 0.7
+  moveSpeed: 0.75
   moveProgress: 0
 --- !u!4 &523539842
 Transform:

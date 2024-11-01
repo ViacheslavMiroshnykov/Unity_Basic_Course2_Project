@@ -4,13 +4,16 @@ using UnityEngine;
 
 
 [DisallowMultipleComponent]
-public class MoveObject : MonoBehaviour
+public class WallMove : MonoBehaviour
 {
     [SerializeField] Vector3 movePosition;
     [SerializeField] float moveSpeed;
-    [SerializeField] [Range (0,1)] float moveProgress; 
+    [SerializeField] [Range (0,1)] float moveProgress;
+    Vector3 stopMove = new Vector3 (-82.6999969f,-0.899999976f,53.5999985f);
 
     Vector3 startPosition;
+
+    bool isActive = true;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +24,17 @@ public class MoveObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        Move();
+        if(isActive == true)
+        {
+          Move();
+        } 
+        
+        if(transform.position.x >= stopMove.x )
+        {
+            isActive = false;
+
+        }
+        
     }
 
     private void Move()
