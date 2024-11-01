@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 0, y: -38, z: 0}
-  moveSpeed: 0.225
+  moveSpeed: 0.125
   moveProgress: 0
 --- !u!4 &138070093
 Transform:
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 0, y: -38, z: 0}
-  moveSpeed: 0.05
+  moveSpeed: 0.2
   moveProgress: 0
 --- !u!4 &337320302
 Transform:
@@ -619,7 +619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 0, y: 38, z: 0}
-  moveSpeed: 0.175
+  moveSpeed: 0.125
   moveProgress: 0
 --- !u!4 &727916372
 Transform:
@@ -668,7 +668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 0, y: -38, z: 0}
-  moveSpeed: 0.25
+  moveSpeed: 0.2
   moveProgress: 0
 --- !u!4 &812150505
 Transform:
@@ -786,7 +786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 0, y: 38, z: 0}
-  moveSpeed: 0.1
+  moveSpeed: 0.05
   moveProgress: 0
 --- !u!4 &865397060
 Transform:
@@ -909,7 +909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 0, y: -38, z: 0}
-  moveSpeed: 0.2
+  moveSpeed: 0.125
   moveProgress: 0
 --- !u!4 &872085550
 Transform:
@@ -1466,7 +1466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 0, y: 38, z: 0}
-  moveSpeed: 0.125
+  moveSpeed: 0.175
   moveProgress: 0
 --- !u!4 &1284387558
 Transform:
@@ -2160,7 +2160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 0, y: 38, z: 0}
-  moveSpeed: 0.15
+  moveSpeed: 0.1
   moveProgress: 0
 --- !u!4 &1700889817
 Transform:
@@ -2273,7 +2273,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 795340952320068896, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
       propertyPath: m_Drag
-      value: 1.5
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
       propertyPath: m_LocalPosition.x
