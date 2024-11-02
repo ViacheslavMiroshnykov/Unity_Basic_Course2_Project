@@ -37,7 +37,6 @@ public class Rocket : MonoBehaviour
         Rotation();
         }
         DebugKeys();
-        FirstScene();
     }
 
     void DebugKeys()
@@ -49,14 +48,6 @@ public class Rocket : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.O))
         {
             collisionOff = !collisionOff;
-        }
-    }
-
-    void FirstScene()
-    {
-        if(Input.GetKeyDown(KeyCode.Return))
-        {
-            SceneManager.LoadScene("Level 1");
         }
     }
 
