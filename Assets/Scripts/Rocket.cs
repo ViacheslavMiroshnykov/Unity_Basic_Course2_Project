@@ -37,6 +37,7 @@ public class Rocket : MonoBehaviour
         Rotation();
         }
         DebugKeys();
+        FirstScene();
     }
 
     void DebugKeys()
@@ -48,6 +49,14 @@ public class Rocket : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.O))
         {
             collisionOff = !collisionOff;
+        }
+    }
+
+    void FirstScene()
+    {
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene("Level 1");
         }
     }
 
@@ -94,12 +103,15 @@ public class Rocket : MonoBehaviour
     }
     void LoadNextLevel() // Finish
     {
-        SceneManager.LoadScene("Level 2");
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextLevelIndex = currentLevelIndex+1;
+        SceneManager.LoadScene(nextLevelIndex);
     }
 
     void LoadFirstLevel() // Lose
     {
-        SceneManager.LoadScene("Level 1");
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentLevelIndex);
     }
 
     void Launch()
