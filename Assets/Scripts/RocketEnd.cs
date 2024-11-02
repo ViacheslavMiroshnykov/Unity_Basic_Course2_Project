@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class RocketEnd : MonoBehaviour
 {
-    [SerializeField]float rotSpeed = 100f;
-    [SerializeField]float flySpeed = 100f;
+    [SerializeField] TextMeshProUGUI energyText;
+    [SerializeField] float energyTotal = 100;
+    [SerializeField] int energyApply = 10;
+    [SerializeField] float rotSpeed = 100f;
+    [SerializeField] float flySpeed = 100f;
     [SerializeField] AudioClip flySounds;
     [SerializeField] AudioClip boomSounds;
     [SerializeField] AudioClip finishSounds;
@@ -23,6 +28,7 @@ public class RocketEnd : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        energyText.text = energyTotal.ToString();
         state = State.Playing;
         rigidBody = GetComponent<Rigidbody>();
         audioSourse = GetComponent<AudioSource>();
@@ -68,12 +74,20 @@ public class RocketEnd : MonoBehaviour
                 Finish();
                 break;
             case "Battery":
-                print("Battery");
+                PlusEnergy(100, collision.gameObject);
                 break;
             default:
                 Lose();
                 break;
         }
+    }
+
+    void PlusEnergy(int energyToAdd, GameObject batteryObj)
+    {
+        batteryObj.GetComponent<SphereCollider>().enabled = false;
+        energyTotal += energyToAdd;
+        energyText.text = energyTotal.ToString();
+        Destroy(batteryObj);
     }
     void Finish()
     {
@@ -108,8 +122,11 @@ public class RocketEnd : MonoBehaviour
 
     void Launch()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if(Input.GetKey(KeyCode.Space) && energyTotal > 1)
         {
+            energyTotal -= energyApply * Time.deltaTime; // Не округляем сразу
+            energyText.text = Mathf.FloorToInt(energyTotal).ToString(); // Округляем только для отображения целого значения
+
             rigidBody.AddRelativeForce(Vector3.up*flySpeed*Time.deltaTime);
             if (audioSourse.isPlaying == false)
             {

@@ -256,6 +256,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23111683}
   m_CullTransparentMesh: 1
+--- !u!1001 &31962287
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2545206385319734770, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
+      propertyPath: energyText
+      value: 
+      objectReference: {fileID: 23111685}
+    - target: {fileID: 2545206385319734770, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
+      propertyPath: energyApply
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2545206385319734770, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
+      propertyPath: energyTotal
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -46.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542616653725119934, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
+      propertyPath: m_Name
+      value: Rocket
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
 --- !u!1001 &161946311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1346,63 +1415,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4746b507cf5694bf5beb75d7cc847b48, type: 3}
---- !u!1001 &2029294289
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -46.170002
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 17.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.06929016
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898505122245639397, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5542616653725119934, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
-      propertyPath: m_Name
-      value: Rocket
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
 --- !u!1001 &2094657284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1802,7 +1814,7 @@ SceneRoots:
   - {fileID: 1737362564}
   - {fileID: 1507945259}
   - {fileID: 1061933290}
-  - {fileID: 2029294289}
   - {fileID: 565135095}
   - {fileID: 1308394790}
   - {fileID: 1006944367}
+  - {fileID: 31962287}

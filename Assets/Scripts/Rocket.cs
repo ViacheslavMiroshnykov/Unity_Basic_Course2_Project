@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Rocket : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI energyText;
-    [SerializeField] int energyTotal = 100;
+    [SerializeField] float energyTotal = 100;
     [SerializeField] int energyApply = 10;
     [SerializeField] float rotSpeed = 100f;
     [SerializeField] float flySpeed = 100f;
@@ -74,7 +74,7 @@ public class Rocket : MonoBehaviour
                 Finish();
                 break;
             case "Battery":
-                PlusEnergy(200, collision.gameObject);
+                PlusEnergy(100, collision.gameObject);
                 break;
             default:
                 Lose();
@@ -121,10 +121,11 @@ public class Rocket : MonoBehaviour
 
     void Launch()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if(Input.GetKey(KeyCode.Space) && energyTotal > 1)
         {
-            energyTotal -= Mathf.RoundToInt(energyApply*Time.deltaTime);
-            energyText.text = energyTotal.ToString();
+            energyTotal -= energyApply * Time.deltaTime; // Не округляем сразу
+            energyText.text = Mathf.FloorToInt(energyTotal).ToString(); // Округляем только для отображения целого значения
+
             rigidBody.AddRelativeForce(Vector3.up*flySpeed*Time.deltaTime);
             if (audioSourse.isPlaying == false)
             {
