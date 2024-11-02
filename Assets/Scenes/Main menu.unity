@@ -427,10 +427,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 780426175}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000019073, y: 626}
-  m_SizeDelta: {x: 1598.442, y: 86.676}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -97}
+  m_SizeDelta: {x: 1427.8782, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &288925071
 MonoBehaviour:
@@ -1769,7 +1769,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 814, y: 72}
+  m_AnchoredPosition: {x: 819.5, y: 76}
   m_SizeDelta: {x: 1598.442, y: 86.676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1217270274
@@ -1794,7 +1794,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435:\n\u041F\u0420\u041E\u0411\u0415\u041B
     - \u0432\u0437\u043B\u0435\u0442 \u0440\u0430\u043A\u0435\u0442\u044B\n\u041A\u043D\u043E\u043F\u043A\u0438
-    A \u0438 D - \u043F\u043E\u0432\u043E\u0440\u043E\u0442 \u0440\u0430\u043A\u0435\u0442\u044B"
+    A \u0438 D - \u043F\u043E\u0432\u043E\u0440\u043E\u0442 \u0440\u0430\u043A\u0435\u0442\u044B\nEsc
+    - \u0432\u044B\u0439\u0442\u0438 \u0438\u0437 \u0438\u0433\u0440\u044B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
