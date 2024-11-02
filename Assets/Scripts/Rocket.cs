@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Rocket : MonoBehaviour
 {
-    [SerializeField]float rotSpeed = 100f;
-    [SerializeField]float flySpeed = 100f;
+    [SerializeField] TextMeshProUGUI energyText;
+    [SerializeField] int energyTotal = 100;
+    [SerializeField] int energyApply = 10;
+    [SerializeField] float rotSpeed = 100f;
+    [SerializeField] float flySpeed = 100f;
     [SerializeField] AudioClip flySounds;
     [SerializeField] AudioClip boomSounds;
     [SerializeField] AudioClip finishSounds;
@@ -23,6 +28,7 @@ public class Rocket : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        energyText.text = energyTotal.ToString();
         state = State.Playing;
         rigidBody = GetComponent<Rigidbody>();
         audioSourse = GetComponent<AudioSource>();
@@ -68,12 +74,20 @@ public class Rocket : MonoBehaviour
                 Finish();
                 break;
             case "Battery":
-                print("Battery");
+                PlusEnergy(200, collision.gameObject);
                 break;
             default:
                 Lose();
                 break;
         }
+    }
+
+    void PlusEnergy(int energyToAdd, GameObject batteryObj)
+    {
+        batteryObj.GetComponent<SphereCollider>().enabled = false;
+        energyTotal += energyToAdd;
+        energyText.text = energyTotal.ToString();
+        Destroy(batteryObj);
     }
     void Finish()
     {
@@ -109,6 +123,8 @@ public class Rocket : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Space))
         {
+            energyTotal -= Mathf.RoundToInt(energyApply*Time.deltaTime);
+            energyText.text = energyTotal.ToString();
             rigidBody.AddRelativeForce(Vector3.up*flySpeed*Time.deltaTime);
             if (audioSourse.isPlaying == false)
             {
