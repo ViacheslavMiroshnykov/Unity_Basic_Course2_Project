@@ -15,6 +15,7 @@ public class Rocket : MonoBehaviour
     [SerializeField] ParticleSystem finishParticles;
     Rigidbody rigidBody;
     AudioSource audioSourse;
+    bool collisionOff = false;
 
     enum State {Playing,Dead,NextLevel};
     State state = State.Playing;
@@ -35,12 +36,25 @@ public class Rocket : MonoBehaviour
         Launch(); 
         Rotation();
         }
+        DebugKeys();
+    }
+
+    void DebugKeys()
+    {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+        else if(Input.GetKeyDown(KeyCode.O))
+        {
+            collisionOff = !collisionOff;
+        }
     }
 
     void OnCollisionEnter(Collision collision)
     {
 
-      if(state == State.Dead || state == State.NextLevel)
+      if(state == State.Dead || state == State.NextLevel || collisionOff)
         {
             return;
         }

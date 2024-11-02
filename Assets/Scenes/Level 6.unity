@@ -926,7 +926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 86, y: 0, z: 0}
-  moveSpeed: 0.03
+  moveSpeed: 0.034
   moveProgress: 0
 --- !u!108 &705507994 stripped
 Light:
