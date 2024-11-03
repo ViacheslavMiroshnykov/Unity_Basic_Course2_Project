@@ -200,6 +200,26 @@ Light:
   m_CorrespondingSourceObject: {fileID: 646972074874984910, guid: 0aa1a80312fba441b97a62152e4179e4, type: 3}
   m_PrefabInstance: {fileID: 8109650528113440454}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &744526109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8764606386642353789, guid: 4c59a0ca3dddb45ae92944075dbe5a19, type: 3}
+  m_PrefabInstance: {fileID: 5901494662981688870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &744526110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744526109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9619dd11ab84d48eab69d896a6ff0a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movePosition: {x: 0, y: 0, z: 0}
+  moveSpeed: 0
+  moveProgress: 0
 --- !u!1001 &798595012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1169,7 +1189,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8764606386642353789, guid: 4c59a0ca3dddb45ae92944075dbe5a19, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 744526110}
   m_SourcePrefab: {fileID: 100100000, guid: 4c59a0ca3dddb45ae92944075dbe5a19, type: 3}
 --- !u!1001 &7222061891801723310
 PrefabInstance:
@@ -1278,7 +1301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3381512179211469220, guid: 3da446e911bab45538a1a0dccdeb76ba, type: 3}
       propertyPath: moveSpeed
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3381512179211469220, guid: 3da446e911bab45538a1a0dccdeb76ba, type: 3}
       propertyPath: moveProgress
@@ -1286,7 +1309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3381512179211469220, guid: 3da446e911bab45538a1a0dccdeb76ba, type: 3}
       propertyPath: movePosition.x
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3381512179211469220, guid: 3da446e911bab45538a1a0dccdeb76ba, type: 3}
       propertyPath: movePossition.x

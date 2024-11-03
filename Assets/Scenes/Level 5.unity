@@ -1388,7 +1388,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7990039078203648402, guid: 4746b507cf5694bf5beb75d7cc847b48, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1953300854}
+      addedObject: {fileID: 1953300859}
   m_SourcePrefab: {fileID: 100100000, guid: 4746b507cf5694bf5beb75d7cc847b48, type: 3}
 --- !u!4 &1143654622 stripped
 Transform:
@@ -1711,7 +1711,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7990039078203648402, guid: 4746b507cf5694bf5beb75d7cc847b48, type: 3}
   m_PrefabInstance: {fileID: 1109137555}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1953300854
+--- !u!114 &1953300859
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1720,11 +1720,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1953300853}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9619dd11ab84d48eab69d896a6ff0a8f, type: 3}
+  m_Script: {fileID: 11500000, guid: f4e18fa16655246b589cb4eea2a1acdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 0, y: -50, z: 0}
-  moveSpeed: 0.05
+  moveSpeed: 0.02
   moveProgress: 0
 --- !u!1001 &2094657284
 PrefabInstance:

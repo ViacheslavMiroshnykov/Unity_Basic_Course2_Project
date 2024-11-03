@@ -21,6 +21,10 @@ public class Rocket : MonoBehaviour
     Rigidbody rigidBody;
     AudioSource audioSourse;
     bool collisionOff = false;
+    public bool IsDead()
+{
+    return state == State.Dead;
+}
 
     enum State {Playing,Dead,NextLevel};
     State state = State.Playing;
@@ -28,10 +32,10 @@ public class Rocket : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        energyText.text = energyTotal.ToString();
         state = State.Playing;
         rigidBody = GetComponent<Rigidbody>();
         audioSourse = GetComponent<AudioSource>();
+        energyText.text = energyTotal.ToString();
     }
 
     // Update is called once per frame

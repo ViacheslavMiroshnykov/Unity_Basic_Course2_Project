@@ -922,7 +922,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 695912473}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81d2af319c53641e593b558052a765fc, type: 3}
+  m_Script: {fileID: 11500000, guid: f4e18fa16655246b589cb4eea2a1acdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 86, y: 0, z: 0}
@@ -2931,7 +2931,7 @@ PrefabInstance:
       objectReference: {fileID: 1197406346}
     - target: {fileID: 2545206385319734770, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
       propertyPath: energyApply
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2545206385319734770, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
       propertyPath: energyTotal

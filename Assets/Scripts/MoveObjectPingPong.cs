@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [DisallowMultipleComponent]
-public class MoveObject : MonoBehaviour
+public class MoveObjectPingPong : MonoBehaviour
 {
     [SerializeField] Vector3 movePosition;
     [SerializeField] float moveSpeed;
@@ -27,13 +27,7 @@ public class MoveObject : MonoBehaviour
 
     private void Move()
     {
-        moveProgress += Time.deltaTime * moveSpeed;
-        
-        if (moveProgress > 1)
-        {
-          moveProgress = 1;
-        }
-    
+        moveProgress = Mathf.PingPong(Time.time * moveSpeed, 1);
         Vector3 offset = movePosition * moveProgress;
         transform.position = startPosition + offset;
     }
