@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -17,6 +17,10 @@ public class MainMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             SceneManager.LoadScene(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
 }
