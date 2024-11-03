@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 0, y: 0, z: 26.5}
-  moveSpeed: 1.2
+  moveSpeed: 1
   moveProgress: 0
 --- !u!1001 &340940454
 PrefabInstance:
@@ -360,9 +360,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2846432334616304328, guid: 96cc1f3dffc414540b84279535afecad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abff2352f396f44258c05723ef6e0727, type: 2}
     - target: {fileID: 4333016085006549583, guid: 96cc1f3dffc414540b84279535afecad, type: 3}
       propertyPath: m_Name
       value: LaunchPad (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333016085006549583, guid: 96cc1f3dffc414540b84279535afecad, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7668485672016936534, guid: 96cc1f3dffc414540b84279535afecad, type: 3}
       propertyPath: m_LocalScale.x
@@ -835,7 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 0, y: 0, z: 26.5}
-  moveSpeed: 0.9
+  moveSpeed: 1
   moveProgress: 0
 --- !u!1 &744660076
 GameObject:
@@ -1301,7 +1309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 0, y: 0, z: 26.5}
-  moveSpeed: 1.1
+  moveSpeed: 1
   moveProgress: 0
 --- !u!1 &1308394787
 GameObject:

@@ -1630,7 +1630,7 @@ PrefabInstance:
       objectReference: {fileID: 523966805}
     - target: {fileID: 2545206385319734770, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
       propertyPath: energyApply
-      value: 2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2545206385319734770, guid: 34cdf4dfe0b1b42278a83d5ca0aeb802, type: 3}
       propertyPath: energyTotal
